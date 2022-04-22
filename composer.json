@@ -1,0 +1,162 @@
+{
+    "name": "shopware/shopware",
+    "description": "Shopware is the next generation of open source e-commerce software made in Germany",
+    "keywords": ["shopware", "shop"],
+    "homepage": "http://www.shopware.com",
+    "type": "project",
+    "license": [
+        "AGPL-3.0",
+        "proprietary"
+    ],
+    "support": {
+        "forum": "https://forum.shopware.com",
+        "chat": "https://slack.shopware.com",
+        "wiki": "https://developers.shopware.com/",
+        "source": "https://github.com/shopware/shopware",
+        "issues": "https://issues.shopware.com"
+    },
+    "require": {
+        "php": "^7.4 || ~8.0.0",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-date": "*",
+        "ext-dom": "*",
+        "ext-gd": "*",
+        "ext-hash": "*",
+        "ext-iconv": "*",
+        "ext-intl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-session": "*",
+        "ext-simplexml": "*",
+        "ext-xml": "*",
+        "ext-zip": "*",
+        "ext-zlib": "*",
+        "lib-libxml": "*",
+        "bcremer/line-reader": "1.1.0",
+        "beberlei/assert": "3.3.1",
+        "beberlei/doctrineextensions": "1.3.0",
+        "cocur/slugify": "4.0.0",
+        "composer/package-versions-deprecated": "*",
+        "doctrine/cache": "1.12.1",
+        "doctrine/collections": "1.6.8",
+        "doctrine/common": "3.1.2",
+        "doctrine/dbal": "2.13.4",
+        "doctrine/orm": "2.9.5",
+        "doctrine/persistence": "2.2.2",
+        "elasticsearch/elasticsearch": "^7",
+        "fig/link-util": "1.1.1",
+        "guzzlehttp/guzzle": "7.3.0",
+        "guzzlehttp/psr7": "1.8.2",
+        "laminas/laminas-code": "4.4.3",
+        "laminas/laminas-escaper": "2.9.0",
+        "league/flysystem": "~1.1.4",
+        "league/flysystem-aws-s3-v3": "1.0.28",
+        "monolog/monolog": "2.1.1",
+        "mpdf/mpdf": "8.0.13",
+        "ocramius/proxy-manager": "2.13.0",
+        "ongr/elasticsearch-dsl": "7.2.2",
+        "psr/http-message": "1.0.1",
+        "ramsey/uuid": "4.1.1",
+        "setasign/fpdf": "1.8.4",
+        "setasign/fpdi": "2.3.6",
+        "stecman/symfony-console-completion": "0.11.0",
+        "superbalist/flysystem-google-storage": "7.2.2",
+        "symfony/class-loader": "v3.4.45",
+        "symfony/config": "~4.4.14",
+        "symfony/console": "~4.4.14",
+        "symfony/dependency-injection": "~4.4.14",
+        "symfony/expression-language": "~4.4.14",
+        "symfony/filesystem": "~4.4.14",
+        "symfony/finder": "~4.4.14",
+        "symfony/form": "~4.4.14",
+        "symfony/http-foundation": "~4.4.14",
+        "symfony/http-kernel": "~4.4.14",
+        "symfony/options-resolver": "~4.4.14",
+        "symfony/process": "~4.4.14",
+        "symfony/serializer": "~5.3.8",
+        "symfony/validator": "~4.4.14",
+        "symfony/web-link": "~4.4.14",
+        "wikimedia/less.php": "3.1.0"
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php56": "*"
+    },
+    "suggest": {
+        "ext-apcu": "*",
+        "ext-zend-opcache": "*"
+    },
+    "require-dev": {
+        "behat/behat": "^3.8.0",
+        "behat/gherkin": "4.6.2",
+        "behat/mink": "1.8.1",
+        "behat/mink-selenium2-driver": "1.4.0",
+        "friends-of-behat/mink-extension": "2.5.0",
+        "friendsofphp/php-cs-fixer": "3.2.1",
+        "kubawerlos/php-cs-fixer-custom-fixers": "3.0.2",
+        "php-parallel-lint/php-var-dump-check": "^0.5",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpstan/extension-installer": "1.1.0",
+        "phpstan/phpstan": "0.12.99",
+        "phpstan/phpstan-doctrine": "0.12.44",
+        "phpstan/phpstan-phpunit": "0.12.22",
+        "phpstan/phpstan-symfony": "0.12.44",
+        "phpunit/phpunit": "^9.4",
+        "sensiolabs/behat-page-object-extension": "2.3.3",
+        "symfony/browser-kit": "~4.4.14",
+        "symfony/dom-crawler": "~4.4.14"
+    },
+    "include-path": [
+        "engine/Library/"
+    ],
+    "autoload": {
+        "psr-0": {
+            "Doctrine\\Common\\Proxy\\AbstractProxyFactory": "engine/Library/",
+            "Doctrine\\ORM\\Persisters\\Entity\\BasicEntityPersister": "engine/Library/",
+            "Shopware": "engine/",
+            "Enlight": "engine/Library/",
+            "Zend": "engine/Library/",
+            "JSMin": "engine/Library/minify/"
+        },
+        "files": ["engine/Shopware/Shopware.php"],
+        "classmap": [
+            "engine/Shopware/",
+            "engine/Library/Smarty/"
+        ],
+        "exclude-from-classmap": [
+            "engine/Shopware/Plugins/Community/",
+            "engine/Shopware/Plugins/Local/",
+            "custom/plugins/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shopware\\Behat\\ShopwareExtension\\": "tests/Mink/Extension/ShopwareExtension",
+            "Shopware\\Tests\\Mink\\": "tests/Mink/features/bootstrap",
+            "Shopware\\Tests\\Unit\\": "tests/Unit",
+            "Shopware\\Tests\\Functional\\": "tests/Functional"
+        }
+    },
+    "config": {
+        "autoloader-suffix": "Shopware",
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs-check": "php-cs-fixer fix --dry-run -v",
+        "cs-fix": "php-cs-fixer fix -v",
+        "post-install-cmd": "./build/composer-post-install-cmd.sh",
+        "post-update-cmd": "./build/composer-post-update-cmd.sh",
+        "test": "phpunit -c tests/ --colors=always",
+        "test-unit": "phpunit -c tests/phpunit_unit.xml.dist --colors=always"
+    }
+}
